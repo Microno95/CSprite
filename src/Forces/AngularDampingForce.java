@@ -1,3 +1,7 @@
+package Forces;
+
+import Sprites.*;
+
 public class AngularDampingForce extends Force
 	{
 		public AngularDampingForce()

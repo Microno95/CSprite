@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+
+import Forces.*;
 import processing.core.PApplet;
+import Sprites.*;
 
 public class CSprite extends PApplet {
 	public static void main(String[] args) {
@@ -60,7 +63,7 @@ public class CSprite extends PApplet {
 		background(128);
 		if (to_draw == 1) {
 			for (SpriteInstance i : fallen) {
-				wave.set_str_y(-1 * sin(frameCount / frameRate) + ((float) random(-10, 10)) / 10);
+				wave.set_str_y(-1 * sin(frameCount / frameRate) + random(-10, 10) / 10);
 				wave.applyForce(i);
 				angdamper.applyForce(i);
 				damper.applyForce(i);
@@ -87,12 +90,12 @@ public class CSprite extends PApplet {
 			to_draw = 1;
 			fallen.add(new SpriteInstance(fallen2));
 			fallen.get(fallen.size() - 1).setCollides(true).set_dx(random(-10, 10)).set_dy(random(-10, 10))
-					.set_angular((float) random(-1, 1) / 10).set_x(mouseX).set_y(mouseY).set_step(1)
+					.set_angular(random(-1, 1) / 10).set_x(mouseX).set_y(mouseY).set_step(1)
 					.bounds_visible(false);
 		} else if (mouseButton == RIGHT) {
 			to_draw = 2;
 		} else {
-			fallen = new ArrayList<SpriteInstance>(1);
+			fallen = new ArrayList<>(1);
 			fallen.add(new SpriteInstance(fallen2));
 			fallen.get(0).setCollides(true).set_dx(-2).set_dy(3).set_angular(3);
 		}
@@ -104,7 +107,7 @@ public class CSprite extends PApplet {
 			for (int i = 0; i < TOT_ADDITION; i++) {
 				fallen.add(new SpriteInstance(fallen2));
 				fallen.get(fallen.size() - 1).setCollides(true).set_dx(random(-10, 10)).set_dy(random(-10, 10))
-						.set_angular((float) random(-1, 1) / 10)
+						.set_angular(random(-1, 1) / 10)
 						.set_pos_rad(width / 2, height / 2, random(0, height / 4), random(0, 2 * PI)).set_step(1)
 						.bounds_visible(false);
 			}

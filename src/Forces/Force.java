@@ -1,3 +1,7 @@
+package Forces;
+
+import Sprites.*;
+
 public class Force
 	{
 		private float str_x;

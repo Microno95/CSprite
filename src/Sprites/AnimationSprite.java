@@ -1,3 +1,5 @@
+package Sprites;
+
 import java.awt.Color;
 
 import processing.core.PApplet;
@@ -105,25 +107,25 @@ public class AnimationSprite extends Sprite
 				{
 					set_dx(get_dx() * -1);
 					xOrientation = !xOrientation;
-					set_x((float) (get_collision_bounds()[0] + get_collision_bounds()[2]) - (float) get_width()/2);
+					set_x((get_collision_bounds()[0] + get_collision_bounds()[2]) - (float) get_width()/2);
 				}
 				else if (get_x() - (float) get_width()/2 <= get_collision_bounds()[0] - get_collision_bounds()[2])
 				{
 					set_dx(get_dx() * -1);
 					xOrientation = !xOrientation;
-					set_x((float) (get_collision_bounds()[0] - get_collision_bounds()[2]) + (float) get_width()/2);
+					set_x((get_collision_bounds()[0] - get_collision_bounds()[2]) + (float) get_width()/2);
 				}
 				if (get_y() + (float) get_height()/2 >= get_collision_bounds()[1] + get_collision_bounds()[3])
 				{
 					set_dy(get_dy() * -1);
 					yOrientation = !yOrientation;
-					set_y((float) (get_collision_bounds()[1] + get_collision_bounds()[3]) - (float) get_height()/2);
+					set_y((get_collision_bounds()[1] + get_collision_bounds()[3]) - (float) get_height()/2);
 				}
 				else if (get_y() - (float) get_height()/2 <= get_collision_bounds()[1] - get_collision_bounds()[3])
 				{
 					set_dy(get_dy() * -1);
 					yOrientation = !yOrientation;
-					set_y((float) (get_collision_bounds()[1] - get_collision_bounds()[3]) + (float) get_height()/2);
+					set_y((get_collision_bounds()[1] - get_collision_bounds()[3]) + (float) get_height()/2);
 				}
 			}
 			return this;

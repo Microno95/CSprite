@@ -1,4 +1,8 @@
+package Forces;
+
 import processing.core.PApplet;
+import Forces.Force;
+import Sprites.*;
 
 public class Turbulence extends Force
 	{

@@ -1,4 +1,6 @@
-class SpriteInstance extends Sprite
+package Sprites;
+
+public class SpriteInstance extends Sprite
 	{
 		public SpriteInstance(Sprite obj)
 		{

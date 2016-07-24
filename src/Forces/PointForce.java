@@ -1,3 +1,7 @@
+package Forces;
+
+import Sprites.*;
+
 public class PointForce extends Force
 	{
 		private float x;

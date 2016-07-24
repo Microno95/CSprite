@@ -1,3 +1,5 @@
+package Sprites;
+
 import java.awt.Color;
 import processing.core.PApplet;
 import processing.core.PConstants;
@@ -164,22 +166,22 @@ public class Sprite
 				if (get_x() + (float) width/2 >= collision_bounds[0] + collision_bounds[2])
 				{
 					set_dx(get_dx() * -1);
-					set_x((float) (collision_bounds[0] + collision_bounds[2]) - (float) width/2);
+					set_x((collision_bounds[0] + collision_bounds[2]) - (float) width/2);
 				}
 				else if (get_x() - (float) width/2 <= collision_bounds[0] - collision_bounds[2])
 				{
 					set_dx(get_dx() * -1);
-					set_x((float) (collision_bounds[0] - collision_bounds[2]) + (float) width/2);
+					set_x((collision_bounds[0] - collision_bounds[2]) + (float) width/2);
 				}
 				if (get_y() + (float) height/2 >= collision_bounds[1] + collision_bounds[3])
 				{
 					set_dy(get_dy() * -1);
-					set_y((float) (collision_bounds[1] + collision_bounds[3]) - (float) height/2);
+					set_y((collision_bounds[1] + collision_bounds[3]) - (float) height/2);
 				}
 				else if (get_y() - (float) height/2 <= collision_bounds[1] - collision_bounds[3])
 				{
 					set_dy(get_dy() * -1);
-					set_y((float) (collision_bounds[1] - collision_bounds[3]) + (float) height/2);
+					set_y((collision_bounds[1] - collision_bounds[3]) + (float) height/2);
 				}
 			}
 			else
@@ -211,7 +213,7 @@ public class Sprite
 			         (Math.abs(e.get_y() - get_y()) * 2 < (e.height + height));
 		}
 		
-		public PImage xReversePImage( PImage image ) 
+		public PImage xReversePImage( PImage image )
 		{
 			PImage reverse;
 			reverse = screen.createImage(image.width, image.height, PConstants.ARGB );

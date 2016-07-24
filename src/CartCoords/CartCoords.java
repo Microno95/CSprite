@@ -1,7 +1,9 @@
+package CartCoords;
+
 public class CartCoords
 	{
-		float x;
-		float y;
+		public float x;
+		public float y;
 		
 		public CartCoords()
 		{

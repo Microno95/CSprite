@@ -1,5 +1,10 @@
-import java.util.ArrayList;
+package Forces;
 
+import java.util.ArrayList;
+import CartCoords.CartCoords;
+import Sprites.*;
+
+@SuppressWarnings("SameParameterValue")
 public class PathForce extends Force
 	{
 		//ATTRIBUTES
@@ -67,7 +72,7 @@ public class PathForce extends Force
 		}
 		
 
-		public float distance(double x1, double x2, double y1, double y2)
+		private float distance(double x1, double x2, double y1, double y2)
 		{
 			return (float) Math.sqrt(Math.pow((float) (x1 - x2), 2) + Math.pow((float) (y1- y2), 2));
 		}

@@ -1,3 +1,7 @@
+package Forces;
+
+import Sprites.*;
+
 public class DampingForce extends Force
 	{		
 		public DampingForce()

@@ -1,3 +1,5 @@
+package Sprites;
+
 public class AnimSpriteInstance extends AnimationSprite
 	{
 		public AnimSpriteInstance(AnimationSprite obj) 

@@ -1,3 +1,6 @@
+import Sprites.Sprite;
+
+@SuppressWarnings("SameParameterValue")
 public class Obstacle
 	{
 		private float x,  y, width, orientation, restitution;
